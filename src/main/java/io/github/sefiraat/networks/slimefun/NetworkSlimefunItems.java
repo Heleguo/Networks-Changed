@@ -1,6 +1,8 @@
 package io.github.sefiraat.networks.slimefun;
 
 import io.github.sefiraat.networks.Networks;
+import io.github.sefiraat.networks.slimefun.network.NetworkMorePusher;
+import io.github.sefiraat.networks.slimefun.network.NetworkBestPusher;
 import io.github.sefiraat.networks.slimefun.network.NetworkAutoCrafter;
 import io.github.sefiraat.networks.slimefun.network.NetworkBridge;
 import io.github.sefiraat.networks.slimefun.network.NetworkCell;
@@ -58,6 +60,8 @@ public class NetworkSlimefunItems {
     public static final UnplaceableBlock PRISTINE_AI_CORE;
     public static final UnplaceableBlock INTERDIMENSIONAL_PRESENCE;
 
+    public static final NetworkMorePusher NETWORK_MOREPUSHER;
+    public static final NetworkBestPusher NETWORK_BESTPUSHER;
     public static final NetworkController NETWORK_CONTROLLER;
     public static final NetworkBridge NETWORK_BRIDGE;
     public static final NetworkMonitor NETWORK_MONITOR;
@@ -324,6 +328,27 @@ public class NetworkSlimefunItems {
                 OPTIC_GLASS.getItem(), OPTIC_CABLE.getItem(), OPTIC_GLASS.getItem(),
             }
         );
+        NETWORK_MOREPUSHER = new NetworkMorePusher(
+            NetworksItemGroups.NETWORK_ITEMS,
+            NetworksSlimefunItemStacks.NETWORK_MOREPUSHER,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                OPTIC_GLASS.getItem(), NETWORK_PUSHER.getItem(), OPTIC_GLASS.getItem(),
+                NETWORK_PUSHER.getItem(), OPTIC_GLASS.getItem(), NETWORK_PUSHER.getItem(),
+                OPTIC_GLASS.getItem(), NETWORK_PUSHER.getItem(), OPTIC_GLASS.getItem(),
+            }
+        );
+        NETWORK_BESTPUSHER = new NetworkBestPusher(
+            NetworksItemGroups.NETWORK_ITEMS,
+            NetworksSlimefunItemStacks.NETWORK_BESTPUSHER,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                OPTIC_GLASS.getItem(), NETWORK_MOREPUSHER.getItem(), OPTIC_GLASS.getItem(),
+                NETWORK_MOREPUSHER.getItem(), OPTIC_GLASS.getItem(), NETWORK_MOREPUSHER.getItem(),
+                OPTIC_GLASS.getItem(), NETWORK_MOREPUSHER.getItem(), OPTIC_GLASS.getItem(),
+            }
+        );
+
 
         NETWORK_CONTROL_X = new NetworkControlX(
             NetworksItemGroups.NETWORK_ITEMS,
@@ -847,6 +872,8 @@ public class NetworkSlimefunItems {
         NETWORK_EXPORT.register(plugin);
         NETWORK_GRABBER.register(plugin);
         NETWORK_PUSHER.register(plugin);
+        NETWORK_MOREPUSHER.register(plugin);
+        NETWORK_BESTPUSHER.register(plugin);
         NETWORK_CONTROL_X.register(plugin);
         NETWORK_CONTROL_V.register(plugin);
         NETWORK_VACUUM.register(plugin);
