@@ -50,10 +50,10 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
             return;
         }
 
-        getLogger().info("########################################");
-        getLogger().info("            Networks - 网络              ");
-        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
-        getLogger().info("########################################");
+        getLogger().info("#############################################");
+        getLogger().info("               Networks - 网络               ");
+        getLogger().info(" 作者: Sefiraat 汉化: ybw0014 改版: shixinzia ");
+        getLogger().info("#############################################");
 
         saveDefaultConfig();
         tryUpdate();
