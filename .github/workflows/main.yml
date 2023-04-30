@@ -44,7 +44,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "Networks-Changed"
         prerelease: true
-        title: "Networks-Change 自动构建版本"
+        title: "Networks-Changed 自动构建版本"
         files: |
            target/*
 
