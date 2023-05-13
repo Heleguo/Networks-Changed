@@ -2,7 +2,7 @@ package io.github.sefiraat.networks.managers;
 
 import io.github.sefiraat.networks.Networks;
 import io.github.sefiraat.networks.listeners.ExplosiveToolListener;
-import io.github.sefiraat.networks.listeners.Shixinzia;
+import io.github.sefiraat.networks.listeners.ShiXinzia;
 import org.bukkit.event.Listener;
 
 public class ListenerManager {
