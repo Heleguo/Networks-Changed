@@ -8,7 +8,6 @@ public class ListenerManager {
 
     public ListenerManager() {
         addListener(new ExplosiveToolListener());
-        addListener(new ShiXinzia());
     }
 
     private void addListener(Listener listener) {
