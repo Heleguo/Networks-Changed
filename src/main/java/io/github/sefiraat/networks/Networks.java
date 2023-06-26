@@ -51,12 +51,6 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
             return;
         }
 
-<<<<<<< HEAD
-        getLogger().info("#############################################");
-        getLogger().info("               Networks - 网络               ");
-        getLogger().info(" 作者: Sefiraat 汉化: ybw0014 改版: shixinzia ");
-        getLogger().info("#############################################");
-=======
         if (!Slimefun.getVersion().endsWith("DEV")) {
             getLogger().log(Level.SEVERE, "由于目前版本中存在一个的问题并未在 Slimefun 的公开版本中修复，");
             getLogger().log(Level.SEVERE, "本插件目前仅支持 Slimefun 的开发版（赞助版本），");
@@ -68,9 +62,9 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
 
         getLogger().info("########################################");
         getLogger().info("            Networks - 网络              ");
-        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
+        getLogger().info(" 作者: Sefiraat 汉化: ybw0014  改版：xinzi    ");
+        getLogger().info("                部分BS修改：Heleguo    ");
         getLogger().info("########################################");
->>>>>>> upstream/master
 
         saveDefaultConfig();
         tryUpdate();
