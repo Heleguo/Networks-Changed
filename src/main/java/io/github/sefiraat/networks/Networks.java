@@ -7,6 +7,7 @@ import io.github.sefiraat.networks.slimefun.NetheoPlants;
 import io.github.sefiraat.networks.slimefun.NetworkSlimefunItems;
 import io.github.sefiraat.networks.slimefun.network.NetworkController;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
 import net.guizhanss.slimefun4.utils.WikiUtils;
 import org.bstats.bukkit.Metrics;
@@ -50,10 +51,26 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
             return;
         }
 
+<<<<<<< HEAD
         getLogger().info("#############################################");
         getLogger().info("               Networks - 网络               ");
         getLogger().info(" 作者: Sefiraat 汉化: ybw0014 改版: shixinzia ");
         getLogger().info("#############################################");
+=======
+        if (!Slimefun.getVersion().endsWith("DEV")) {
+            getLogger().log(Level.SEVERE, "由于目前版本中存在一个的问题并未在 Slimefun 的公开版本中修复，");
+            getLogger().log(Level.SEVERE, "本插件目前仅支持 Slimefun 的开发版（赞助版本），");
+            getLogger().log(Level.SEVERE, "请退回 #75 版本，并关闭自动更新。");
+            getLogger().log(Level.SEVERE, "等待KOOK频道/Q群的后续更新通知。");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        getLogger().info("########################################");
+        getLogger().info("            Networks - 网络              ");
+        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
+        getLogger().info("########################################");
+>>>>>>> upstream/master
 
         saveDefaultConfig();
         tryUpdate();
